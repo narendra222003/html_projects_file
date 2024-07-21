@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 1em;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+  background: #007BFF;
+  border-radius: 5px;
+}
+
+section {
+  padding: 2em 5%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+#home {
+  background: #f4f4f4;
+  padding: 4em 5%;
+}
+
+#home h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+#home p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#about, #projects, #contact {
+  background: #e4e4e4;
+  margin: 1em 0;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#about h2, #projects h2, #contact h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+#about a {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#about a:hover {
+  background: #0056b3;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: left;
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.project p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.project a {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.5em 1em;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project a:hover {
+  background: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  margin: 0.5em 0 0.2em 0;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.5em 1em;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+}
+
+footer p {
+  margin: 0;
+}

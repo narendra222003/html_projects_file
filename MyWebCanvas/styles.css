@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+.controls label, .controls input, .controls button {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+canvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 600px;
+}

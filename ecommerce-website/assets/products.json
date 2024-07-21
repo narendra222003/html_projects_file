@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Amber Palace",
+        "price": 1200,
+        "image": "Amber Palace.jpg",
+        "description": "Amber Palace is a majestic fort located in Amer, Rajasthan, India. Known for its artistic Hindu style elements, it is a major tourist attraction in Jaipur."
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "price": 1500,
+        "image": "Product2.jpg",
+        "description": "Description of Product 2."
+    }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" ng-controller="MainController as mainCtrl">
+
+        <h1>{{ mainCtrl.greeting }}</h1>
+        <div class="input-group">
+            <input type="text" ng-model="mainCtrl.newItem" placeholder="Add a new item">
+            <button ng-click="mainCtrl.addItem()">Add Item</button>
+        </div>
+        <ul>
+            <li ng-repeat="item in mainCtrl.items track by $index">
+                <span ng-if="!item.editing">{{ item.text }}</span>
+                <input type="text" ng-if="item.editing" ng-model="item.newText">
+                <button ng-if="!item.editing" ng-click="mainCtrl.editItem($index)">Edit</button>
+                <button ng-if="item.editing" ng-click="mainCtrl.updateItem($index)">Update</button>
+                <button ng-click="mainCtrl.removeItem($index)">Remove</button>
+            </li>
+        </ul>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

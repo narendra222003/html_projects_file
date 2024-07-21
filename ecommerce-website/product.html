@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Product Details</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section id="product-details" class="product-details">
+            <div class="product-container">
+                <img src="Amber Palace.jpg" alt="Amber Palace" class="product-image">
+                <div class="product-info">
+                    <h2>Amber Palace</h2>
+                    <p class="product-description">Amber Palace is a majestic fort located in Amer, Rajasthan, India. Known for its artistic Hindu style elements, it is a major tourist attraction in Jaipur.</p>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-button" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="Amber Palace.jpg" alt="Amber Palace" class="product-image">
+                <div class="product-info">
+                    <h2>Amber Palace</h2>
+                    <p class="product-description">Amber Palace is a majestic fort located in Amer, Rajasthan, India. Known for its artistic Hindu style elements, it is a major tourist attraction in Jaipur.</p>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-button" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-details" class="product-details">
+            <div class="product-container">
+                <img src="Amber Palace.jpg" alt="Amber Palace" class="product-image">
+                <div class="product-info">
+                    <h2>Amber Palace</h2>
+                    <p class="product-description">Amber Palace is a majestic fort located in Amer, Rajasthan, India. Known for its artistic Hindu style elements, it is a major tourist attraction in Jaipur.</p>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-button" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-container">
+                <img src="Amber Palace.jpg" alt="Amber Palace" class="product-image">
+                <div class="product-info">
+                    <h2>Amber Palace</h2>
+                    <p class="product-description">Amber Palace is a majestic fort located in Amer, Rajasthan, India. Known for its artistic Hindu style elements, it is a major tourist attraction in Jaipur.</p>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-button" onclick="addToCart(1)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+
+            fetch('assets/products.json')
+                .then(response => response.json())
+                .then(products => {
+                    const product = products.find(p => p.id == productId);
+                    const productDetails = document.getElementById('product-details');
+
+                    productDetails.innerHTML = `
+                        <div class="product-container">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-info">
+                                <h2>${product.name}</h2>
+                                <p class="product-description">${product.description}</p>
+                                <p class="product-price">₹${product.price}</p>
+                                <button class="add-to-cart-button" onclick="addToCart(${product.id})">Add to Cart</button>
+                            </div>
+                        </div>
+                    `;
+                });
+        });
+
+        function addToCart(productId) {
+            console.log('Add to cart', productId);
+        }
+    </script>
+</body>
+</html>

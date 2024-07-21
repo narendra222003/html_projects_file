@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            
+        <h1>Weight Converter</h1>
+        <div class="converter">
+            <div class="input-group">
+                <label for="kgInput">Kilograms:</label>
+                <input type="number" id="kgInput" placeholder="Enter weight in kg" oninput="convertFromKg()">
+            </div>
+            <div class="input-group">
+                <label for="lbInput">Pounds:</label>
+                <input type="number" id="lbInput" placeholder="Enter weight in lbs" oninput="convertFromLb()">
+            </div>
+            <div class="input-group">
+                <label for="ozInput">Ounces:</label>
+                <input type="number" id="ozInput" placeholder="Enter weight in oz" oninput="convertFromOz()">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

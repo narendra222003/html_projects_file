@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Typing Test</h1>
+    </header>
+    <main>
+        <div class="container">
+            <label for="wordCount">Select Words to Type:</label>
+            <select id="wordCount">
+                <option value="30">30 words</option>
+                <option value="40">40 words</option>
+                <option value="50">50 words</option>
+                <option value="60">60 words</option>
+                <option value="70">70 words</option>
+                <option value="80">80 words</option>
+                <option value="90">90 words</option>
+                <option value="100">100 words</option>
+                <option value="110">110 words</option>
+            </select>
+            <label for="duration">Select Duration (minutes):</label>
+            <select id="duration">
+                <option value="1">1 minute</option>
+                <option value="2">2 minutes</option>
+                <option value="3">3 minutes</option>
+                <option value="4">4 minutes</option>
+                <option value="5">5 minutes</option>
+                <option value="6">6 minutes</option>
+                <option value="7">7 minutes</option>
+            </select>
+            <button id="startButton">Start Typing Test</button>
+            <p id="quote">The quick brown fox jumps over the lazy dog.</p>
+            <textarea id="userInput" placeholder="Start typing here..."></textarea>
+            <p id="timer">Time: <span id="time">0</span> seconds</p>
+            <p id="result"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
